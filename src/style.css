@@ -21,6 +21,10 @@ small {
   text-align: center;
 }
 
+#description {
+  text-transform: capitalize;
+}
+
 .weather-app {
   background: linear-gradient(
     180deg,
