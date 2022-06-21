@@ -22,7 +22,11 @@ small {
 }
 
 .weather-app {
-  background: linear-gradient(180deg, rgb(243, 69, 69) 30%, rgb(0, 0, 0) 45%);
+  background: linear-gradient(
+    180deg,
+    rgba(8, 40, 91, 0.789) 30%,
+    rgba(0, 0, 0, 0.936) 45%
+  );
   border: solid 1px darkgray;
   border-radius: 4px;
   font-family: "Lato", sans-serif;
