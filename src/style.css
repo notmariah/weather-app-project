@@ -1,3 +1,75 @@
+.weather-app {
+  background: linear-gradient(180deg, rgb(243, 69, 69) 30%, rgb(0, 0, 0) 45%);
+  border: solid 1px darkgray;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  max-width: 350px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.block-1 {
+  background-color: aquamarine;
+  border: solid 1px aquamarine;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  width: 150px;
+}
+
+.current-weather {
+  font-size: 14px;
+}
+.today-date {
+  font-weight: 600;
+}
+
+.current-time {
+  font-weight: 300;
+}
+
+.daily {
+  padding-top: 15px;
+}
+
+.daily-header {
+  font-weight: 500;
+}
+
+.daily-forecast {
+  font-weight: 300;
+}
+
+.dayOne,
+.dayTwo,
+.dayThree {
+  margin-top: 10px;
+}
+
 h1 {
-  color: purple;
+  color: white;
+  font-weight: 700;
+}
+
+p {
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+small {
+  display: block;
+  margin-top: -30px;
+  text-align: center;
 }
