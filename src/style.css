@@ -1,3 +1,26 @@
+h1 {
+  color: white;
+  font-weight: 700;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+small {
+  display: block;
+  margin-top: -30px;
+  text-align: center;
+}
+
 .weather-app {
   background: linear-gradient(180deg, rgb(243, 69, 69) 30%, rgb(0, 0, 0) 45%);
   border: solid 1px darkgray;
@@ -8,7 +31,7 @@
   margin: 0 auto;
   padding: 20px;
 }
-.block-1 {
+.block {
   background-color: aquamarine;
   border: solid 1px aquamarine;
   height: 150px;
@@ -16,6 +39,21 @@
   margin-top: 5px;
   margin-bottom: 20px;
   width: 150px;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 48;
+  color: goldenrod;
+  font-size: 60px;
+  float: right;
+  padding-right: 10px;
+}
+
+.temperature {
+  color: white;
+  font-size: 30px;
+}
+.units {
+  font-size: 12px;
 }
 
 .current-weather {
@@ -45,31 +83,4 @@
 .dayTwo,
 .dayThree {
   margin-top: 10px;
-}
-
-h1 {
-  color: white;
-  font-weight: 700;
-}
-
-p {
-  color: white;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style: none;
-  color: white;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-}
-
-small {
-  display: block;
-  margin-top: -30px;
-  text-align: center;
 }

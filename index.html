@@ -12,6 +12,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> <link rel="stylesheet" href="src/style.css" />
@@ -19,15 +20,18 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <div class="block-1">
+        <div class="block">
           </div>
         <div class="row">
           <div class="col-6">
               <h1>Denver</h1>
               </div>
               <div class="col-6">
-              <p><span class="temperature">60</span> °F | °C</p>
+            <div class="temperature"><span class="temperature">60</span> <span class="units"> °F | °C</span></div>
               </div>
+              </div>  
+              <div class="row">
+                <div class="col-11">
             <ul class="current-weather">
               <li class="today-date">Monday, June 13</li>
               <li class="current-forecast">Clear</li>
@@ -35,6 +39,11 @@
               <li class="current-time">8:44 PM EST</li>
             </ul>
             </div>
+            <div class="col-1">
+            <span class="material-symbols-outlined sunny">
+sunny
+</span>
+            </div></div>
             <div class="daily-forecast">
             <ul class="daily">
                 <div class="dayOne">
