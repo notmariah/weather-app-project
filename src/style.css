@@ -53,12 +53,15 @@ small {
   color: goldenrod;
   font-size: 60px;
   float: right;
+  margin-right: 20px;
   padding-right: 10px;
 }
 
 .temperature {
   color: white;
   font-size: 30px;
+  float: right;
+  margin-right: 20px;
 }
 .units {
   font-size: 12px;

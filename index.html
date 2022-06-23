@@ -34,10 +34,10 @@
               <div class="row">
                 <div class="col-11">
             <ul class="current-weather">
-              <li class="today-date">Monday, June 13</li>
+              <li class="today-date" id="date">Monday, June 13</li>
               <li class="current-forecast" id="description">Clear</li>
               <li class="current-forecast">Humidity <span id="humidity">0</span>%</li>
-              <li class="current-time">8:44 PM EST</li>
+              <li class="current-time"><span id="time">8:44</span> EST</li>
             </ul>
             </div>
             <div class="col-1">
@@ -49,7 +49,7 @@ sunny
             <ul class="daily">
                 <div class="dayOne">
                 <li class="daily-header">Today</li>
-            <li class="daily-forecast">H 80° | L 70° | Sunny | Precipitation 0%</li>
+            <li class="daily-forecast">H <span id="todayHigh">80</span>° | L <span id="todayLow">70</span>° | <span id="todayDescription">Sunny</span> | Humidity <span id="todayHumidity">20</span>%</li>
             </div>
             <div class="dayTwo">
                 <li class="daily-header">Tuesday</li>
