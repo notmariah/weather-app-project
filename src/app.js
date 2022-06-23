@@ -51,6 +51,8 @@ function displayTemperature(response) {
   let lowTempElement = document.querySelector("#todayLow");
   let dateElement = document.querySelector("#date");
   let timeElement = document.querySelector("#time");
+  let weatherIconElement = document.querySelector("#weatherIcon");
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   weatherDescription.innerHTML = response.data.weather[0].description;
@@ -61,8 +63,14 @@ function displayTemperature(response) {
   lowTempElement.innerHTML = Math.round(response.data.main.temp_min);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   timeElement.innerHTML = formatTime(response.data.dt * 1000);
+  weatherIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIconElement.setAttribute("alt", response.data.weather[0].description);
 }
+let city = "Denver";
 let apiKey = "89c4b4c6c243370cb32a6437b3bb99bf";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Denver&appid=${apiKey}&units=imperial`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
 axios.get(apiUrl).then(displayTemperature);
