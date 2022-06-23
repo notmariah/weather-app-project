@@ -15,10 +15,24 @@ li {
   padding: 0;
 }
 
-small {
-  display: block;
-  margin-top: -30px;
-  text-align: center;
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:focus {
+  color: #ec6e4c;
+}
+a:hover {
+  color: #ec6e4c;
+}
+a:active {
+  color: #ec6e4c;
 }
 
 #description {
@@ -37,11 +51,25 @@ small {
   max-width: 350px;
   height: 650px;
   margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px;
 }
+.searchButton {
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.searchButton:hover {
+  border: 1px solid greenyellow;
+  background-color: greenyellow;
+}
+
 .block {
   background-color: aquamarine;
   border: solid 1px aquamarine;
+  float: center;
   height: 150px;
   margin: 0 auto;
   margin-top: 5px;
@@ -90,4 +118,12 @@ small {
 .dayTwo,
 .dayThree {
   margin-top: 10px;
+}
+.footer {
+  color: white;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 50px;
+  text-align: center;
 }

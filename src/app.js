@@ -53,6 +53,8 @@ function displayTemperature(response) {
   let timeElement = document.querySelector("#time");
   let weatherIconElement = document.querySelector("#weatherIcon");
 
+  fahrenheitTemperature = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   weatherDescription.innerHTML = response.data.weather[0].description;
@@ -83,7 +85,28 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
 search("Denver");
+
+let fahrenheitTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let degreeC = document.querySelector("#degreeC");
+degreeC.addEventListener("click", displayCelciusTemperature);
+
+let fahrenheitLink = document.querySelector("#degreeF");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
