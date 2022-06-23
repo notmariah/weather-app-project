@@ -69,8 +69,21 @@ function displayTemperature(response) {
   );
   weatherIconElement.setAttribute("alt", response.data.weather[0].description);
 }
-let city = "Denver";
-let apiKey = "89c4b4c6c243370cb32a6437b3bb99bf";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = "89c4b4c6c243370cb32a6437b3bb99bf";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Denver");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
