@@ -103,23 +103,6 @@ a:active {
   font-weight: 300;
 }
 
-.daily {
-  padding-top: 15px;
-}
-
-.daily-header {
-  font-weight: 500;
-}
-
-.daily-forecast {
-  font-weight: 300;
-}
-
-.dayOne,
-.dayTwo,
-.dayThree {
-  margin-top: 10px;
-}
 .footer {
   color: white;
   display: block;
