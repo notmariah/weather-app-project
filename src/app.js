@@ -47,8 +47,9 @@ function displayTemperature(response) {
   let weatherDescription = document.querySelector("#description");
   let todayDescription = document.querySelector("#todayDescription");
   let humidityElement = document.querySelector("#humidity");
-  let highTempElement = document.querySelector("#todayHigh");
-  let lowTempElement = document.querySelector("#todayLow");
+  let windElement = document.querySelector("#wind-speed");
+  // let highTempElement = document.querySelector("#todayHigh");
+  // let lowTempElement = document.querySelector("#todayLow");
   let dateElement = document.querySelector("#date");
   let timeElement = document.querySelector("#time");
   let weatherIconElement = document.querySelector("#weatherIcon");
@@ -60,9 +61,10 @@ function displayTemperature(response) {
   weatherDescription.innerHTML = response.data.weather[0].description;
   todayDescription.innerHTML = response.data.weather[0].main;
   humidityElement.innerHTML = response.data.main.humidity;
-  todayHumidity.innerHTML = response.data.main.humidity;
-  highTempElement.innerHTML = Math.round(response.data.main.temp_max);
-  lowTempElement.innerHTML = Math.round(response.data.main.temp_min);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  // todayHumidity.innerHTML = response.data.main.humidity;
+  //highTempElement.innerHTML = Math.round(response.data.main.temp_max);
+  //lowTempElement.innerHTML = Math.round(response.data.main.temp_min);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   timeElement.innerHTML = formatTime(response.data.dt * 1000);
   weatherIconElement.setAttribute(
@@ -87,8 +89,8 @@ function handleSubmit(event) {
 
 function displayCelciusTemperature(event) {
   event.preventDefault();
-  let celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   let temperatureElement = document.querySelector("#temperature");
+  let celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 
