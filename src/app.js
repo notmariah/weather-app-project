@@ -112,3 +112,5 @@ degreeC.addEventListener("click", displayCelciusTemperature);
 
 let fahrenheitLink = document.querySelector("#degreeF");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+displayForecast();

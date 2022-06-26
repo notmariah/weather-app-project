@@ -103,6 +103,26 @@ a:active {
   font-weight: 300;
 }
 
+.weather-forecast {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 5px 15px;
+}
+.weather-forecast:hover {
+  background-color: #151515;
+  border: 1px solid #151515;
+  border-radius: 10px;
+}
+
+.weather-forecast-date {
+  font-size: 18px;
+  font-weight: 500;
+}
+.weather-forecast-temperatures-header {
+  font-weight: 600;
+}
+
 .footer {
   color: white;
   display: block;
