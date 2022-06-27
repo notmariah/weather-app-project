@@ -70,7 +70,7 @@ function displayForecast(response) {
   let forecastHTML = ``;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 3) {
+    if (index < 4) {
       forecastHTML =
         forecastHTML +
         `
@@ -121,8 +121,6 @@ function displayTemperature(response) {
   let todayDescription = document.querySelector("#todayDescription");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
-  // let highTempElement = document.querySelector("#todayHigh");
-  // let lowTempElement = document.querySelector("#todayLow");
   let dateElement = document.querySelector("#date");
   let timeElement = document.querySelector("#time");
   let weatherIconElement = document.querySelector("#weatherIcon");
@@ -152,10 +150,20 @@ function search(city) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
+function searchLocation(position) {
+  let apiKey = "89c4b4c6c243370cb32a6437b3bb99bf";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
+
+  if (cityInputElement.value === "paris") {
+    playSong();
+  }
 }
 
 function displayCelciusTemperature(event) {
@@ -171,6 +179,16 @@ function displayFahrenheitTemperature(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+function playSong() {
+  let song = document.querySelector("#block");
+  song.innerHTML = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/41CgzGD7xlgnJe14R4cqkL?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+}
+
 search("Denver");
 
 let fahrenheitTemperature = null;
@@ -183,3 +201,6 @@ degreeC.addEventListener("click", displayCelciusTemperature);
 
 let fahrenheitLink = document.querySelector("#degreeF");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let locationButton = document.querySelector("#current-location");
+locationButton.addEventListener("click", getCurrentLocation);

@@ -55,24 +55,26 @@ a:active {
   margin-bottom: 20px;
   padding: 20px;
 }
+.form-control {
+  border-radius: 20px;
+}
 .searchButton {
   background-color: white;
   border: 1px solid grey;
   border-radius: 4px;
+  margin-top: 5px;
 }
 
 .searchButton:hover {
-  border: 1px solid greenyellow;
-  background-color: greenyellow;
+  border: 1px solid #ec6e4c;
+  background-color: #ec6e4c;
 }
-
-.block {
-  float: center;
-  height: 150px;
-  margin: 0 auto;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  width: 150px;
+.currentLocation {
+  background-color: transparent;
+  border: 0px;
+  color: #ec6e4c;
+  float: right;
+  padding-top: 5px;
 }
 .weatherIcon {
   float: right;
