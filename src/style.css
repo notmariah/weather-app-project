@@ -46,7 +46,7 @@ a:active {
     rgba(0, 0, 0, 0.936) 45%
   );
   border: solid 1px darkgray;
-  border-radius: 4px;
+  border-radius: 10px;
   font-family: "Lato", sans-serif;
   max-width: 350px;
   height: 650px;
@@ -67,8 +67,6 @@ a:active {
 }
 
 .block {
-  background-color: aquamarine;
-  border: solid 1px aquamarine;
   float: center;
   height: 150px;
   margin: 0 auto;
@@ -109,11 +107,6 @@ a:active {
   font-weight: 300;
   padding: 5px 15px;
 }
-.weather-forecast:hover {
-  background-color: #151515;
-  border: 1px solid #151515;
-  border-radius: 10px;
-}
 
 .weather-forecast-date {
   font-size: 18px;
@@ -124,10 +117,18 @@ a:active {
 }
 
 .footer {
-  color: white;
+  color: black;
   display: block;
   font-size: 14px;
+  margin-top: -15px;
+  padding-bottom: 20px;
   text-decoration: none;
-  margin-top: 50px;
   text-align: center;
+}
+
+.footer a {
+  color: black;
+}
+.footer a:hover {
+  color: #ec6e4c;
 }

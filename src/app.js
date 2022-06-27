@@ -38,7 +38,12 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   let month = months[date.getMonth()];
   let currentDate = date.getDate();
-  return `${day}, ${month} ${currentDate}`;
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day}, ${month} ${currentDate} at ${hours}:${minutes}`;
 }
 
 function formatForecastDate(timestamp) {
