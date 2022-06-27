@@ -160,10 +160,6 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
-
-  if (cityInputElement.value === "paris") {
-    playSong();
-  }
 }
 
 function displayCelciusTemperature(event) {
@@ -182,11 +178,6 @@ function displayFahrenheitTemperature(event) {
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
-}
-
-function playSong() {
-  let song = document.querySelector("#block");
-  song.innerHTML = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/41CgzGD7xlgnJe14R4cqkL?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
 }
 
 search("Denver");
