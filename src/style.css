@@ -59,6 +59,7 @@ a:active {
   border-radius: 20px;
 }
 .searchButton {
+  color: #black;
   background-color: white;
   border: 1px solid grey;
   border-radius: 4px;
@@ -66,6 +67,7 @@ a:active {
 }
 
 .searchButton:hover {
+  color: white;
   border: 1px solid #ec6e4c;
   background-color: #ec6e4c;
 }
